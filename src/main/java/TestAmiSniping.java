@@ -11,7 +11,7 @@ public class TestAmiSniping {
 
     public static void inCorrect(AmazonEC2    client) {
         DescribeImagesRequest  request = new DescribeImagesRequest();
-        request.withFilters(new Filter("name").withValues(IMG_NAME));
+        //request.withFilters(new Filter("name").withValues(IMG_NAME));
         //request.withOwners("amazon");
         DescribeImagesResult result = client.describeImages(request);
     }
