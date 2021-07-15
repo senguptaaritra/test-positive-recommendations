@@ -1,0 +1,70 @@
+
+name: My CodeGuru Tests
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+  
+jobs:
+  My-Action:
+    runs-on: ubuntu-latest
+    steps:
+    
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          
+          
+      # Refer to Step 1 for more details
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        if: ${{ always() }}
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-west-2
+    
+      # Refer to Step 2 for more details    
+      #- name: Checkout the CodeGuru Reviewer Action repository
+      #  uses: actions/checkout@v2
+      #  if: ${{ always() }}
+      #  with:
+      #    repository: vijejain/cicd-actions
+      #    ref: refs/heads/main
+      #    token: ${{ secrets.TOKEN }}   # Required for Private Beta
+      #    path: ./.github/vijejain/cicd-actions
+
+      - name: Build the repository to be analyzed (using Maven)
+        run: |
+          cd ${{ github.workspace }}
+          mvn package
+          
+      - run: echo "Job status after building is ${{ job.status }}."
+
+      - name: AWS CodeGuru Reviewer Scanner
+        uses: aws-actions/codeguru-reviewer@v1.1
+        if: ${{ always() }} 
+        with:
+          source_path: .        # Repository root 
+          build_path: target # build artifact(s) directory
+          s3_bucket: codeguru-reviewer-aritras-actions-bucket  # S3 Bucket with "codeguru-reviewer-*" prefix
+
+      #- name: Upload review result
+      #  uses: github/codeql-action/upload-sarif@v1
+      #  with:
+      #    sarif_file: codeguru-results.sarif.json
+      
+      - name: 'Upload Artifact'
+        uses: actions/upload-artifact@v2
+        with:
+          name: sarif_results
+          path: codeguru-results*.json
+
+      - run: echo "🍏 This job's status is ${{ job.status }}."
+
+      
