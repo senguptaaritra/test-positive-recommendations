@@ -176,10 +176,11 @@
               "threadFlows": [
                 {
                   "locations": [
-                    { "message": {
-                        "text": "Attempt to write to the file."
-                      },
+                    { 
                       "location": {
+                        "message": {
+                          "text": "Attempt to write to the file."
+                        },
                         "physicalLocation": {
                           "artifactLocation": {
                             "uri": "src/main/java/TestAmiSniping.java"
