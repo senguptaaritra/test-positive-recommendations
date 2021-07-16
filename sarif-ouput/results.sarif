@@ -188,8 +188,7 @@
                     { 
                       "location": {
                         "message": {
-                          "text": "The code requests images filtered by owner or executable user. This is a good practice and disallows loading an image from an untrusted source.
-"
+                          "text": "The code requests images filtered by owner. This is a good practice and disallows loading an image from an untrusted source."
                         },
                         "physicalLocation": {
                           "artifactLocation": {
@@ -203,7 +202,6 @@
                     },
                     {
                       "location": {
-                       
                         "physicalLocation": {
                           "artifactLocation": {
                             "uri": "src/main/java/TestAmiSniping.java"
