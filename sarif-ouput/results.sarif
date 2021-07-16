@@ -169,7 +169,7 @@
             }
           ],
           "message": {
-            "text": "You have configured the request correctly. The call to describeImageRequest is safe."
+            "text": "You have configured the request correctly. The call to describeImages is safe."
           },
           "codeFlows": [
             {
