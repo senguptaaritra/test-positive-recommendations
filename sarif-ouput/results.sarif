@@ -179,7 +179,7 @@
                     { 
                       "location": {
                         "message": {
-                          "text": "Attempt to write to the file."
+                          "text": "Attempt to write to the file one"
                         },
                         "physicalLocation": {
                           "artifactLocation": {
@@ -193,6 +193,9 @@
                     },
                     {
                       "location": {
+                        "message": {
+                          "text": "Attempt to write to the file two"
+                        },
                         "physicalLocation": {
                           "artifactLocation": {
                             "uri": "src/main/java/TestAmiSniping.java"
