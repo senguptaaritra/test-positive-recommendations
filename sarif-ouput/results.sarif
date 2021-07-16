@@ -76,16 +76,7 @@
                 "markdown": "Input Validations"
               },
               "help": {
-                "text": "Input validations is a rule type that helps you improve the security of your code by identifying areas where malformed data might be entering your database and triggering malfunctions of downstream comp
-                
-                
-                
-                
-                
-                
-                
-                
-                nts.",
+                "text": "Input validations is a rule type that helps you improve the security of your code by identifying areas where malformed data might be entering your database and triggering malfunctions of downstream componts.",
                 "markdown": "Input validations is a rule type that helps you improve the security of your code by identifying areas where malformed data might be entering your database and triggering malfunctions of downstream components."
               }
             },
@@ -185,7 +176,7 @@
               "threadFlows": [
                 {
                   "locations": [
-                    { 
+                    {
                       "location": {
                         "message": {
                           "text": "The code requests images filtered by owner. This is a good practice and disallows loading an image from an untrusted source."
