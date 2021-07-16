@@ -1,0 +1,254 @@
+{
+  "version": "2.1.0",
+  "$schema": "http://json.schemastore.org/sarif-2.1.0-rtm.4",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "CodeGuru Reviewer Scanner",
+          "informationUri": "https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/how-codeguru-reviewer-works.html",
+          "rules": [
+            {
+              "id": "AWS Best Practices",
+              "name": "AWS Best Practices",
+              "shortDescription": {
+                "text": "AWS Best Practices",
+                "markdown": "AWS Best Practices"
+              },
+              "help": {
+                "text": "AWS best practices are rules that help you improve your code quality by identifying areas where your code doesn’t follow a best practice of an AWS API.",
+                "markdown": "AWS best practices are rules that help you improve your code quality by identifying areas where your code doesn’t follow a best practice of an AWS API."
+              }
+            },
+            {
+              "id": "AWS CloudFormation Issues",
+              "name": "AWS CloudFormation Issues",
+              "shortDescription": {
+                "text": "AWS CloudFormation Issues",
+                "markdown": "AWS CloudFormation Issues"
+              },
+              "help": {
+                "text": "CloudFormation rules help you improve the code quality of your CloudFormation templates.",
+                "markdown": "CloudFormation rules help you improve the code quality of your CloudFormation templates."
+              }
+            },
+            {
+              "id": "Duplicate Code",
+              "name": "Duplicate Code",
+              "shortDescription": {
+                "text": "Duplicate Code",
+                "markdown": "Duplicate Code"
+              },
+              "help": {
+                "text": "Duplicate code is a rule type that helps you improve your code quality by detecting duplicated code that could be consolidated for better code maintainability.",
+                "markdown": "Duplicate code is a rule type that helps you improve your code quality by detecting duplicated code that could be consolidated for better code maintainability."
+              }
+            },
+            {
+              "id": "Code Maintenance Issues",
+              "name": "Code Maintenance Issues",
+              "shortDescription": {
+                "text": "Code Maintenance Issues",
+                "markdown": "Code Maintenance Issues"
+              },
+              "help": {
+                "text": "Code maintenance rules are meant to improve your code quality by detecting code complexities or any characteristic in your source code that makes the code difficult to maintain over time.",
+                "markdown": "Code maintenance rules are meant to improve your code quality by detecting code complexities or any characteristic in your source code that makes the code difficult to maintain over time."
+              }
+            },
+            {
+              "id": "Concurrency Issues",
+              "name": "Concurrency Issues",
+              "shortDescription": {
+                "text": "Concurrency Issues",
+                "markdown": "Concurrency Issues"
+              },
+              "help": {
+                "text": "Concurrency rules help you improve your code quality by detecting missing synchronization resulting in incorrect functionality or excessive synchronization leading to performance issues.",
+                "markdown": "Concurrency rules help you improve your code quality by detecting missing synchronization resulting in incorrect functionality or excessive synchronization leading to performance issues."
+              }
+            },
+            {
+              "id": "Input Validations",
+              "name": "Input Validations",
+              "shortDescription": {
+                "text": "Input Validations",
+                "markdown": "Input Validations"
+              },
+              "help": {
+                "text": "Input validations is a rule type that helps you improve the security of your code by identifying areas where malformed data might be entering your database and triggering malfunctions of downstream components.",
+                "markdown": "Input validations is a rule type that helps you improve the security of your code by identifying areas where malformed data might be entering your database and triggering malfunctions of downstream components."
+              }
+            },
+            {
+              "id": "Python Best Practices",
+              "name": "Python Best Practices",
+              "shortDescription": {
+                "text": "Python Best Practices",
+                "markdown": "Python Best Practices"
+              },
+              "help": {
+                "text": "Python best practices are rules that help you improve your code quality by identifying areas where your code doesn't follow a best practice of the language or one of its libraries.",
+                "markdown": "Python best practices are rules that help you improve your code quality by identifying areas where your code doesn't follow a best practice of the language or one of its libraries."
+              }
+            },
+            {
+              "id": "Java Best Practices",
+              "name": "Java Best Practices",
+              "shortDescription": {
+                "text": "Java Best Practices",
+                "markdown": "Java Best Practices"
+              },
+              "help": {
+                "text": "Java best practices are rules that help you improve your code quality by identifying areas where your code doesn't follow a best practice set by the language or one of its libraries.",
+                "markdown": "Java best practices are rules that help you improve your code quality by identifying areas where your code doesn't follow a best practice set by the language or one of its libraries."
+              }
+            },
+            {
+              "id": "Resource Leaks",
+              "name": "Resource Leaks",
+              "shortDescription": {
+                "text": "Resource Leaks",
+                "markdown": "Resource Leaks"
+              },
+              "help": {
+                "text": "Resource leaks is a rule type that helps you improve the security of your code by identifying leaks in resource objects.",
+                "markdown": "Resource leaks is a rule type that helps you improve the security of your code by identifying leaks in resource objects."
+              }
+            },
+            {
+              "id": "Security Issues",
+              "name": "Security Issues",
+              "shortDescription": {
+                "text": "Security Issues",
+                "markdown": "Security Issues"
+              },
+              "help": {
+                "text": "Security rules help you improve the security of your code by identifying risks from the top ten Open Web Application Security Project (OWASP) categories, security best practices for AWS APIs, and common Java crypto libraries. OWASP is a standard awareness document for developers and web application security.",
+                "markdown": "Security rules help you improve the security of your code by identifying risks from the top ten Open Web Application Security Project (OWASP) categories, security best practices for AWS APIs, and common Java crypto libraries. OWASP is a standard awareness document for developers and web application security."
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "Security Issues",
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/main/java/TestAmiSniping.java"
+                },
+                "region": {
+                  "startLine": 16,
+                  "endLine": 16
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "This code requests images that are filtered by name only. The response might contain images from other public account or grant launch permissions which can load an image from an untrusted source. To ensure that this code does not unintentionally load an image from an untrusted account, filter by owner or executable user. [Learn more](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Filtering.html).<br><br><br>Relevant Locations:<br><br>* src/main/java/TestAmiSniping.java, line: 13 <br><br>* src/main/java/TestAmiSniping.java, line: 16 <br><br>"
+          }
+        },
+        {
+          "ruleId": "Security Issues Good",
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/main/java/TestAmiSniping.java"
+                },
+                "region": {
+                  "startLine": 23,
+                  "endLine": 23
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "You have configured the request correctly. The call to describeImageRequest is safe."
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "message": {
+                    "text": "owner is set"
+                  },
+                  "location": {
+                    "physicalLocation": {
+                      "artifactLocation": {
+                        "uri": "src/main/java/TestAmiSniping.java"
+                      },
+                      "region": {
+                        "startLine": 22
+                      }
+                    }
+                  }
+                },
+                {
+                  "message": {
+                    "text": "You have configured the request correctly. The call to describeImageRequest is safe."
+                  },
+                  "location": {
+                    "physicalLocation": {
+                      "artifactLocation": {
+                        "uri": "src/main/java/TestAmiSniping.java"
+                      },
+                      "region": {
+                        "startLine": 23
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "Security Issues",
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/main/java/App.java"
+                },
+                "region": {
+                  "startLine": 16,
+                  "endLine": 16
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "It looks like your code uses a cipher object with an insecure transformation. To make your<br>code more secure, use one of the following algorithms with a built-in integrity check:<br>AES/GCM/NoPadding, or for Java 11 or newer, ChaCha20-Poly1305. Learn more about [`javax.crypto.Cipher.getInstance`](https://docs.oracle.com/javase/8/docs/api/javax/crypto/Cipher.html#getInstance-java.lang.String-).<br><br><br>Relevant Locations:<br><br>* src/main/java/App.java, line: 16 <br><br>    * src/main/java/App.java, line: 16 (The constant value)<br><br>"
+          }
+        },
+        {
+          "ruleId": "Security Issues",
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/main/java/App.java"
+                },
+                "region": {
+                  "startLine": 12,
+                  "endLine": 12
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "It looks like your code uses a cipher object with an insecure transformation. To make your<br>code more secure, use one of the following algorithms with a built-in integrity check:<br>AES/GCM/NoPadding, or for Java 11 or newer, ChaCha20-Poly1305. Learn more about [`javax.crypto.Cipher.getInstance`](https://docs.oracle.com/javase/8/docs/api/javax/crypto/Cipher.html#getInstance-java.lang.String-).<br><br><br>Relevant Locations:<br><br>* src/main/java/App.java, line: 12 <br><br>    * src/main/java/App.java, line: 12 (The constant value)<br><br>"
+          }
+        }
+      ]
+    }
+  ]
+}
