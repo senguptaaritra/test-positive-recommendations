@@ -176,7 +176,9 @@
               "threadFlows": [
                 {
                   "locations": [
-                    {
+                    { "message": {
+                        "text": "Attempt to write to the file."
+                      },
                       "location": {
                         "physicalLocation": {
                           "artifactLocation": {
