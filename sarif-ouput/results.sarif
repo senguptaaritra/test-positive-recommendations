@@ -178,9 +178,6 @@
                   "locations": [
                     {
                       "location": {
-                        "message": {
-                          "text": "owner is set"
-                        },
                         "physicalLocation": {
                           "artifactLocation": {
                             "uri": "src/main/java/TestAmiSniping.java"
@@ -201,9 +198,6 @@
                             "startLine": 23
                           }
                         }
-                      },
-                      "message": {
-                        "text": "You have configured the request correctly. The call to describeImageRequest is safe."
                       }
                     }
                   ]
