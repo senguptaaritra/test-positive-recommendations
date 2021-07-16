@@ -76,7 +76,16 @@
                 "markdown": "Input Validations"
               },
               "help": {
-                "text": "Input validations is a rule type that helps you improve the security of your code by identifying areas where malformed data might be entering your database and triggering malfunctions of downstream components.",
+                "text": "Input validations is a rule type that helps you improve the security of your code by identifying areas where malformed data might be entering your database and triggering malfunctions of downstream comp
+                
+                
+                
+                
+                
+                
+                
+                
+                nts.",
                 "markdown": "Input validations is a rule type that helps you improve the security of your code by identifying areas where malformed data might be entering your database and triggering malfunctions of downstream components."
               }
             },
@@ -179,7 +188,8 @@
                     { 
                       "location": {
                         "message": {
-                          "text": "Attempt to write to the file one"
+                          "text": "The code requests images filtered by owner or executable user. This is a good practice and disallows loading an image from an untrusted source.
+"
                         },
                         "physicalLocation": {
                           "artifactLocation": {
@@ -193,9 +203,7 @@
                     },
                     {
                       "location": {
-                        "message": {
-                          "text": "Attempt to write to the file two"
-                        },
+                       
                         "physicalLocation": {
                           "artifactLocation": {
                             "uri": "src/main/java/TestAmiSniping.java"
