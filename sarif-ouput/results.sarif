@@ -204,7 +204,8 @@
                             "startLine": 22
                           }
                         }
-                      }
+                      },
+                      "nestingLevel": 1
                     },
                     {
                       "location": {
