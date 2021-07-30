@@ -176,6 +176,21 @@
               "threadFlows": [
                 {
                   "locations": [
+                     {
+                      "location": {
+                        "message": {
+                          "text": "The code requests images filtered by owner. This is a good practice and disallows loading an image from an untrusted source."
+                        },
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "src/main/java/TestAmiSniping.java"
+                          },
+                          "region": {
+                            "startLine": 21
+                          }
+                        }
+                      }
+                    },
                     {
                       "location": {
                         "message": {
